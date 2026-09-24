@@ -6,11 +6,22 @@ public class BacSi extends NhanVienYTe {
 	
 	
 	//Phương thức
+	public BacSi() {
+		super();
+		this.chuyenKhoa = "";
+	}
+	
 	public BacSi(String maNV, String hoTen, String gioiTinh, int namSinh, float luongCB, String chuyenKhoa) {
 		super(maNV,hoTen,gioiTinh,namSinh,luongCB);
 		this.chuyenKhoa = chuyenKhoa;
 	}
 	
+	public String getChuyenKhoa() {
+		return chuyenKhoa;
+	}
+	public void setChuyenKhoa(String chuyenKhoa) {
+		this.chuyenKhoa = chuyenKhoa;
+	}
 	
 	//Phương thức riêng
 	public void khamBenh() {
@@ -18,6 +29,7 @@ public class BacSi extends NhanVienYTe {
 	}
 	
 	//Phương thức chung
+	@Override
 	public double tinhLuong() {
 		return luongCB*20000000f;
 	}
@@ -25,6 +37,11 @@ public class BacSi extends NhanVienYTe {
 	public void hienThi() {
 		super.hienThi();
 		System.out.println("Chuyen khoa:"+chuyenKhoa);
+	}
+	
+	public void keDon(DonThuoc dt, Thuoc t) {
+		System.out.println("Bac si:"+getHoTen()+" yeu cau them thuoc vao:" );
+		dt.themThuoc(t);
 	}
 
 }
