@@ -1,5 +1,7 @@
 package Entities;
 
+import java.util.Date;
+
 public class YTa extends NhanVienYTe {
 	//Thuộc tính
 	private String phongTruc;
@@ -9,8 +11,8 @@ public class YTa extends NhanVienYTe {
 		super();
 		this.phongTruc ="";
 	}
-	public YTa(String maNV, String hoTen, String gioiTinh, float luongCB, String phongTruc) {
-		super(maNV, hoTen, gioiTinh, luongCB);
+	public YTa(String maNV, String hoTen, String gioiTinh, Date ngaySinh, float luongCB, String phongTruc) {
+		super(maNV, hoTen, gioiTinh,ngaySinh, luongCB);
 		this.phongTruc = phongTruc;
 	}
 	

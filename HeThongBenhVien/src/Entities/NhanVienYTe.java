@@ -1,10 +1,13 @@
 package Entities;
 
+import java.util.Date;
+
 public class NhanVienYTe {
 	//Thuộc tính
 	protected String maNV;
 	protected String hoTen;
 	protected String gioiTinh;
+	protected Date ngaySinh;
 	protected float luongCB;
 		
 	
@@ -13,12 +16,14 @@ public class NhanVienYTe {
 		this.maNV = "";
 		this.hoTen = "";
 		this.gioiTinh = "";
+		this.ngaySinh = new Date();
 		this.luongCB = 0.0f;
 	}
-	public NhanVienYTe(String maNV, String hoTen, String gioiTinh,float luongCB) {
+	public NhanVienYTe(String maNV, String hoTen, String gioiTinh,Date ngaySinh, float luongCB) {
 		this.maNV = maNV;
 		this.hoTen = hoTen;
 		this.gioiTinh = gioiTinh;
+		this.ngaySinh = ngaySinh;
 		this.luongCB = luongCB;
 	}
 	
@@ -46,6 +51,12 @@ public class NhanVienYTe {
 		return this.hoTen;
 	}
 	
+	public Date getNgaySinh() {
+		return ngaySinh;
+	}
+	public void setNgaySinh(Date ngaySinh) {
+		this.ngaySinh = ngaySinh;
+	}
 	public void setHoTen(String hoTen) {
 		if (hoTen != null && !hoTen.trim().isEmpty()) {
 			this.hoTen = hoTen;
@@ -60,14 +71,27 @@ public class NhanVienYTe {
 	}
 	
 	public void hienThi() {
-		System.out.println("Ma nhan vien:"+getMaNV()+ " ho ten:"+ getHoTen()+ " luong:"+ tinhLuong());
+		System.out.println("Ma nhan vien:"+getMaNV());
+		System.out.println("Ho ten:"+ getHoTen());
+		System.out.println("Gioi tinh:"+getGioiTinh());
+		System.out.println("Ngay Sinh:"+ getNgaySinh()+" Tuoi:"+tinhTuoi());
+		System.out.println("Luong:"+ tinhLuong());
 	}
 	public void khamBenh() {
-		System.out.print("");
+		
 	}
 	public void chamSocBenhNhan() {
-		System.out.print("");
-	}
 		
+	}
+	public void keDon(DonThuoc dt, Thuoc t) {
+	}
+	
+	//Tinh tuoi cho nhan vien
+	public int tinhTuoi() {
+		Date d = new Date();
+		int y = d.getYear();
+		int ns = ngaySinh.getYear();
+		return y-ns;
+	}
 
 }

@@ -1,5 +1,7 @@
 package Entities;
 
+import java.util.Date;
+
 public class BacSi extends NhanVienYTe {
 	//Thuộc tính
 	private String chuyenNganh;
@@ -18,8 +20,8 @@ public class BacSi extends NhanVienYTe {
 		this.chuyenNganh = chuyenNganh;
 	}
 
-	public BacSi(String maNV, String hoTen, String gioiTinh, float luongCB, String chuyenNganh) {
-		super(maNV, hoTen, gioiTinh, luongCB);
+	public BacSi(String maNV, String hoTen, String gioiTinh, Date ngaySinh, float luongCB, String chuyenNganh) {
+		super(maNV, hoTen, gioiTinh,ngaySinh,luongCB);
 		this.chuyenNganh = chuyenNganh;
 	}
 	
@@ -33,6 +35,11 @@ public class BacSi extends NhanVienYTe {
 	@Override
 	public double tinhLuong() {
 		return this.luongCB*10000000;
+	}
+	
+	public void keDon(DonThuoc dt, Thuoc t) {
+		System.out.println("Bac si:"+getHoTen()+ " gui yeu cau ke don:");
+		dt.themThuoc(t);
 	}
 	
 	
