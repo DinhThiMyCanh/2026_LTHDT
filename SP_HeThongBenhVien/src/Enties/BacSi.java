@@ -1,5 +1,7 @@
 package Enties;
 
+import java.util.Date;
+
 public class BacSi extends NhanVienYTe {
 	//Thuộc tính
 	private String chuyenKhoa;
@@ -11,8 +13,8 @@ public class BacSi extends NhanVienYTe {
 		this.chuyenKhoa = "";
 	}
 	
-	public BacSi(String maNV, String hoTen, String gioiTinh, int namSinh, float luongCB, String chuyenKhoa) {
-		super(maNV,hoTen,gioiTinh,namSinh,luongCB);
+	public BacSi(String maNV, String hoTen, String gioiTinh, Date ngaySinh, float luongCB, String chuyenKhoa) {
+		super(maNV,hoTen,gioiTinh,ngaySinh,luongCB);
 		this.chuyenKhoa = chuyenKhoa;
 	}
 	
@@ -42,6 +44,10 @@ public class BacSi extends NhanVienYTe {
 	public void keDon(DonThuoc dt, Thuoc t) {
 		System.out.println("Bac si:"+getHoTen()+" yeu cau them thuoc vao:" );
 		dt.themThuoc(t);
+	}
+	//Phương thức xác định loại nhân viên
+	public String loaiNV() {
+		return "BS";
 	}
 
 }

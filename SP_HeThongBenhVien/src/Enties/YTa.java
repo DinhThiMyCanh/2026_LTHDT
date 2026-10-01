@@ -1,5 +1,7 @@
 package Enties;
 
+import java.util.Date;
+
 public class YTa extends NhanVienYTe {
 	//Thuộc tính
 	private String phongTruc;
@@ -9,8 +11,8 @@ public class YTa extends NhanVienYTe {
 		super();
 		this.phongTruc ="";
 	}
-	public YTa(String maNV, String hoTen, String gioiTinh, int namSinh,float luongCB, String phongTruc) {
-		super(maNV,hoTen,gioiTinh,namSinh,luongCB);
+	public YTa(String maNV, String hoTen, String gioiTinh, Date ngaySinh,float luongCB, String phongTruc) {
+		super(maNV,hoTen,gioiTinh,ngaySinh,luongCB);
 		this.phongTruc = phongTruc;
 	}
 	
@@ -23,6 +25,9 @@ public class YTa extends NhanVienYTe {
 	public void chamSocBenhNhan() {
 		System.out.println("Dang cham soc benh nhan tai phong:"+this.phongTruc);
 	}
-	
+	//Phương thức xác định loại nhân viên
+	public String loaiNV() {
+		return "Y";
+	}
 
 }

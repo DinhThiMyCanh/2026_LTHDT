@@ -1,11 +1,13 @@
 package Enties;
 
+import java.util.Date;
+
 public class NhanVienYTe {
 	
 	protected String maNV;
 	protected String hoTen;
 	protected String gioiTinh;
-	protected int namSinh;
+	protected Date ngaySinh;
 	protected float luongCB;
 	
 	//Phương thức
@@ -13,16 +15,16 @@ public class NhanVienYTe {
 		this.maNV = "";
 	    this.hoTen = "";
 		this.gioiTinh = "";
-		this.namSinh = 0;
+		this.ngaySinh = new Date();
 		this.luongCB = 0.0f;
 	}
 	
 	
-	public NhanVienYTe(String maNV, String hoTen, String gioiTinh, int namSinh, float luongCB) {
+	public NhanVienYTe(String maNV, String hoTen, String gioiTinh,Date ngaySinh, float luongCB) {
 		this.maNV = maNV;
 	    this.hoTen = hoTen;
 		this.gioiTinh = gioiTinh;
-		this.namSinh = namSinh;
+		this.ngaySinh = ngaySinh;
 		this.luongCB = luongCB;
 	}
 	public String getGioiTinh() {
@@ -30,15 +32,16 @@ public class NhanVienYTe {
 	}
 
 	public void setGioiTinh(String gioiTinh) {
+		
 		this.gioiTinh = gioiTinh;
 	}
 
-	public int getNamSinh() {
-		return namSinh;
+	public Date getngaySinh() {
+		return this.ngaySinh;
 	}
 
-	public void setNamSinh(int namSinh) {
-		this.namSinh = namSinh;
+	public void setNamSinh(Date ngaySinh) {
+		this.ngaySinh = ngaySinh;
 	}
 
 	public float getLuongCB() {
@@ -70,12 +73,12 @@ public class NhanVienYTe {
 		}
 	}
 	
-	public static double tinhLuong() {
+	public double tinhLuong() {
 		return 0;
 	}
 	
 	public void hienThi() {
-		System.out.println("Ma Nhan vien:"+ maNV + " Ho ten:"+ hoTen + " Luong:"+ tinhLuong());
+		System.out.println("Ma Nhan vien:"+ maNV + " Ho ten:"+ hoTen + " Tuoi:"+tinhTuoi() +" Luong:"+ tinhLuong());
 	}
 	public void khamBenh() {
 		System.out.print("");
@@ -86,4 +89,39 @@ public class NhanVienYTe {
 	public void keDon(DonThuoc dt, Thuoc t) {
 		
 	}
+	//Tính tuổi cho nhân viên
+	public int tinhTuoi() {
+		Date d = new Date();
+		return d.getYear()-ngaySinh.getYear();
+	}
+	
+	//Tách tên nhân viên
+	/*public String getTen() {
+		String [] cacTu = this.hoTen.split(" ");
+		int l = cacTu.length;
+		return cacTu[l-1];
+	}*/
+	
+	//Tách  họ
+	public String getHo() {
+		int vt = this.hoTen.indexOf(" ");
+		return this.hoTen.substring(0, vt);
+	}
+	//Tách phần đệm
+	public String getDem() {
+		int vt1 = this.hoTen.indexOf(" ");
+		int vt2 = this.hoTen.lastIndexOf(" ");
+		return this.hoTen.substring(vt1+1,vt2);
+	}
+	//Tách tên
+	public String getTen() {
+		int vt = this.hoTen.lastIndexOf(" ");
+		return this.hoTen.substring(vt+1);
+	}
+	
+	//Phương thức xác định loại nhân viên
+	public String loaiNV() {
+		return "";
+	}
+	
 }
