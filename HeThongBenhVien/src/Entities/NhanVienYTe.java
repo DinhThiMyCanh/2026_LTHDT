@@ -93,5 +93,37 @@ public class NhanVienYTe {
 		int ns = ngaySinh.getYear();
 		return y-ns;
 	}
+	//Tran Thi Nhu Nguyet
+	public String getHo() {
+		int vt = hoTen.indexOf(" ");
+		String ho = hoTen.substring(0, vt);
+		return ho;
+	}
+	public String getDem() {
+		int vt1 = hoTen.indexOf(" ");
+		int vt2 = hoTen.lastIndexOf(" ");
+		String dem = hoTen.substring(vt1+1, vt2);
+		return dem;
+	}
+	
+	//Phương thức tách tên nhân viên
+	public String getTen() {
+		// C1: Dùng hàm split
+	/*	String []cacTu = hoTen.split(" ");
+		return cacTu[cacTu.length-1];*/
+		int vt = hoTen.lastIndexOf(" ");
+		String ten = hoTen.substring(vt+1);
+		return ten;		
+	}
+	public String loaiNV() {
+		return "";
+	}
+	@Override
+	public String toString() {
+		return "NhanVienYTe [maNV=" + maNV + ", hoTen=" + hoTen + ", gioiTinh=" + gioiTinh + ", ngaySinh=" + ngaySinh
+				+ ", tinhLuong()=" + tinhLuong() + "]";
+	}
+	
+	
 
 }

@@ -42,5 +42,13 @@ public class BacSi extends NhanVienYTe {
 		dt.themThuoc(t);
 	}
 	
+	public String loaiNV() {
+		return "BS";
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "BacSi [chuyenNganh=" + chuyenNganh + "]";
+	}
 	
 }

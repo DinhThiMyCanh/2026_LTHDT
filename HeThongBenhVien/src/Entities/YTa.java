@@ -39,4 +39,13 @@ public class YTa extends NhanVienYTe {
 	public void chamSocBenhNhan() {
 		System.out.println("Đang cham soc benh nhan tai phong:"+ this.phongTruc);
 	}
+	
+	public String loaiNV() {
+		return "YT";
+	}
+	@Override
+	public String toString() {
+		return super.toString() + "YTa [phongTruc=" + phongTruc + "]";
+	}
+	
 }
