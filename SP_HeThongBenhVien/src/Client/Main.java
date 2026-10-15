@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import Enties.BacSi;
 import Enties.DonThuoc;
+import Enties.IKhamBenh;
 import Enties.NhanVienYTe;
 import Enties.Thuoc;
 import Enties.YTa;
@@ -15,11 +16,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
-		NhanVienYTe nv1 = new BacSi("01","Nguyen Tran Van Anh","Nam", new Date(107,0,12 ) ,2000000f,"Noi khoa");
+		NhanVienYTe nv1 = new BacSi("01","Nguyen Tran Van Anh","Nam", new Date(107,0,12 ) ,2000000,"Noi khoa");
 		
-		NhanVienYTe nv2 = new YTa("02","Nguyen Van B","Nam", new Date(107,9,21),2000000f,"truc cap cuu");
+		NhanVienYTe nv2 = new YTa("02","Nguyen Van B","Nam", new Date(107,9,21),2000000,"truc cap cuu");
 		
-		NhanVienYTe nv3 = new BacSi("03","Le Tran Van","Nam", new Date(107,0,12 ) ,2000000f,"Noi khoa");
+		NhanVienYTe nv3 = new BacSi("03","Le Tran Van","Nam", new Date(107,0,12 ) ,2000000,"Noi khoa");
 		
 		QLNhanVienYTe list = new QLNhanVienYTe(5);
 		list.themNV(nv1);
@@ -32,6 +33,10 @@ public class Main {
 		System.out.println("-------------");
 		//Liệt kê danh sách Y Tá
 		list.lietKe("Y");
+		
+		IKhamBenh nv4 = new BacSi("04","Nguyen C","Nam", new Date(107,0,12 ) ,2000000,"Noi khoa");
+		nv4.khamBenh();
+		
 	}
 
 }

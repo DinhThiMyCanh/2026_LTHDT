@@ -1,8 +1,11 @@
 package Enties;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.DecimalFormat;
 
-public class NhanVienYTe {
+abstract public class NhanVienYTe {
 	
 	protected String maNV;
 	protected String hoTen;
@@ -73,22 +76,14 @@ public class NhanVienYTe {
 		}
 	}
 	
-	public double tinhLuong() {
-		return 0;
-	}
+	abstract public double tinhLuong(); 
 	
 	public void hienThi() {
-		System.out.println("Ma Nhan vien:"+ maNV + " Ho ten:"+ hoTen + " Tuoi:"+tinhTuoi() +" Luong:"+ tinhLuong());
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		DecimalFormat df = new DecimalFormat("#,##0.00");
+		System.out.println("Ma Nhan vien:"+ maNV + " Ho ten:"+ hoTen + " Ngay sinh:"+sdf.format(ngaySinh) +" Luong:"+df.format(tinhLuong()));
 	}
-	public void khamBenh() {
-		System.out.print("");
-	}
-	public void chamSocBenhNhan() {
-		System.out.print("");
-	}
-	public void keDon(DonThuoc dt, Thuoc t) {
-		
-	}
+	
 	//Tính tuổi cho nhân viên
 	public int tinhTuoi() {
 		Date d = new Date();

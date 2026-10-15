@@ -2,7 +2,7 @@ package Enties;
 
 import java.util.Date;
 
-public class BacSi extends NhanVienYTe {
+public class BacSi extends NhanVienYTe implements IKhamBenh, IChamSocBN{
 	//Thuộc tính
 	private String chuyenKhoa;
 	
@@ -33,7 +33,7 @@ public class BacSi extends NhanVienYTe {
 	//Phương thức chung
 	@Override
 	public double tinhLuong() {
-		return luongCB*20000000f;
+		return luongCB*7.0f;
 	}
 	
 	public void hienThi() {
@@ -48,6 +48,12 @@ public class BacSi extends NhanVienYTe {
 	//Phương thức xác định loại nhân viên
 	public String loaiNV() {
 		return "BS";
+	}
+
+	@Override
+	public void chamSocBenhNhan() {
+		System.out.println("Bac si:"+hoTen +" dang cham benh nhan");
+		
 	}
 
 }

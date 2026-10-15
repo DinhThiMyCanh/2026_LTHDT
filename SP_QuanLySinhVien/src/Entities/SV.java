@@ -24,7 +24,17 @@ abstract public class SV{
 	public String toString() {
 		return "SV [hoTen=" + hoTen + ", namSinh=" + namSinh + ", dTB=" + dTB + "]";
 	}
-	
+	//Định  nghĩa lại phương thức equals
+	public boolean equals(Object s)
+	{
+		if (s  instanceof  SV)
+		{
+			SV ss = (SV) s;
+			return hoTen.equals(ss.hoTen) && namSinh==ss.namSinh && dTB==ss.dTB;
+		}
+		else return false;	
+	}
+
 	abstract public boolean duocTN();
 	abstract public String loaiSV();
 }

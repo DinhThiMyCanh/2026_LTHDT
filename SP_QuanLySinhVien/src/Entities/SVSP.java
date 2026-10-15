@@ -9,7 +9,7 @@ public class SVSP extends SV implements IKhenThuong  {
 	}
 
 	public SVSP(String hoTen, int namSinh, double dTB, String noiTT, double diemTT) {
-		super(hoTen,namSinh,dTB);
+		super(hoTen,namSinh, dTB);
 		this.noiTT = noiTT;
 		this.diemTT = diemTT;
 	}
@@ -48,4 +48,15 @@ public class SVSP extends SV implements IKhenThuong  {
 		}
 		
 	}
+	
+	public boolean equals(Object s)
+	{
+		if (s  instanceof  SVSP)
+		{
+			SVSP ss = (SVSP) s;
+			return hoTen.equals(ss.hoTen) && namSinh==ss.namSinh && dTB==ss.dTB && noiTT.equals(ss.noiTT) && diemTT == ss.diemTT;
+		}
+		else return false;	
+	}
+
 }

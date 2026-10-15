@@ -2,7 +2,7 @@ package Enties;
 
 import java.util.Date;
 
-public class YTa extends NhanVienYTe {
+public class YTa extends NhanVienYTe implements IChamSocBN {
 	//Thuộc tính
 	private String phongTruc;
 	
@@ -19,7 +19,7 @@ public class YTa extends NhanVienYTe {
 	//Phương thức chung
 	@Override
 	public double tinhLuong() {
-		return luongCB*500000f;
+		return luongCB*3.5f;
 	}
 	//Phương thức riêng
 	public void chamSocBenhNhan() {
