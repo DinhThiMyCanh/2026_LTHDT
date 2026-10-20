@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Date;
 
-public class NhanVienYTe {
+abstract public class NhanVienYTe {
 	//Thuộc tính
 	protected String maNV;
 	protected String hoTen;
@@ -66,9 +66,7 @@ public class NhanVienYTe {
 		}
 	}
 	
-	public double tinhLuong() {
-		return 0;
-	}
+	abstract public double tinhLuong();
 	
 	public void hienThi() {
 		System.out.println("Ma nhan vien:"+getMaNV());
@@ -76,14 +74,6 @@ public class NhanVienYTe {
 		System.out.println("Gioi tinh:"+getGioiTinh());
 		System.out.println("Ngay Sinh:"+ getNgaySinh()+" Tuoi:"+tinhTuoi());
 		System.out.println("Luong:"+ tinhLuong());
-	}
-	public void khamBenh() {
-		
-	}
-	public void chamSocBenhNhan() {
-		
-	}
-	public void keDon(DonThuoc dt, Thuoc t) {
 	}
 	
 	//Tinh tuoi cho nhan vien

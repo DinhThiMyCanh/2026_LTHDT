@@ -31,6 +31,12 @@ public class Main {
 		//nv2.hienThi();
 		//nv2.chamSocBenhNhan();
 		
+		IChamSocBN nv4 = new BacSi("03", "Tran Thi Nhu Nguyet", "Nam", new Date(107,7,7), 3000000f, "Noi khoa");
+		nv4.chamSocBenhNhan();
+		IChamSocBN nv5 = new YTa("02","Nguyen van B","Nam",new Date(107,7,7),3000000f,"Cap cuu");
+		nv5.chamSocBenhNhan();
+		
+		IKhamBenh nv6 = new BacSi("02","Nguyen van B","Nam",new Date(107,7,7),3000000f,"Cap cuu");
 		
 	}
 

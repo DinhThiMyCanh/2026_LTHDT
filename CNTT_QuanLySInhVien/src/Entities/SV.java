@@ -28,6 +28,15 @@ abstract public class SV {
 	//Phương thức xác định sv được tốt nghiệp
 	abstract public boolean duocTN();
 	
-	
+	public boolean equals(Object s)
+	{
+		if (s  instanceof  SV)
+		{
+			SV ss = (SV) s;
+			return hoTen.equals(ss.hoTen) && namSinh==ss.namSinh && dTB==ss.dTB;
+		}
+		else return false;	
+	}
+
 	
 }

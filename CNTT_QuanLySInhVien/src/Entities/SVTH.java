@@ -51,6 +51,16 @@ public class SVTH extends SV implements IKhenThuong, INghienCuuKhoaHoc {
 		// TODO Auto-generated method stub
 		return diemDT>=8.0;
 	}
+	public boolean equals(Object s)
+	{
+		if (s  instanceof  SVTH)
+		{
+			SVTH ss = (SVTH) s;
+			return hoTen.equals(ss.hoTen) && namSinh==ss.namSinh && dTB==ss.dTB && tenDT.equals(ss.tenDT) && diemDT == ss.diemDT;
+		}
+		else return false;	
+	}
+
 	
 	
 }

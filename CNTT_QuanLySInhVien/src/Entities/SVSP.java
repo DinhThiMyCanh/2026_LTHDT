@@ -42,5 +42,15 @@ public class SVSP extends SV implements IKhenThuong {
 			System.out.println("SVSP:"+hoTen+ " khong duoc xet hoc bong");
 		
 	}
+	public boolean equals(Object s)
+	{
+		if (s  instanceof  SVSP)
+		{
+			SVSP ss = (SVSP) s;
+			return hoTen.equals(ss.hoTen) && namSinh==ss.namSinh && dTB==ss.dTB && noiTT.equals(ss.noiTT) && diemTT == ss.diemTT;
+		}
+		else return false;	
+	}
+
 	
 }

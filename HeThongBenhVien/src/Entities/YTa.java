@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Date;
 
-public class YTa extends NhanVienYTe {
+public class YTa extends NhanVienYTe implements IChamSocBN {
 	//Thuộc tính
 	private String phongTruc;
 	

@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.Date;
 
-public class BacSi extends NhanVienYTe {
+public class BacSi extends NhanVienYTe implements IKhamBenh, IChamSocBN{
 	//Thuộc tính
 	private String chuyenNganh;
 	
@@ -49,6 +49,12 @@ public class BacSi extends NhanVienYTe {
 	@Override
 	public String toString() {
 		return super.toString() + "BacSi [chuyenNganh=" + chuyenNganh + "]";
+	}
+
+	@Override
+	public void chamSocBenhNhan() {
+		System.out.println("Bac si:"+hoTen+" dang cham soc benh nhan");
+		
 	}
 	
 }
