@@ -1,0 +1,10 @@
+SVSP|Nguyen Thi Lan|2004|8.5|Truong THPT Tran Phu|9.0
+SVSP|Tran Van Minh|2003|7.8|Truong THCS Le Loi|8.2
+SVSP|Le Thi Huong|2004|9.1|Truong Tieu hoc Nguyen Hue|9.3
+SVSP|Pham Quoc Bao|2003|6.9|Truong THPT Nguyen Trai|7.5
+SVSP|Vo Thi Mai|2004|8.2|Truong THCS Quang Trung|8.7
+SVTH|Dang Van Khoa|2004|8.8|Ung dung AI trong giao duc|9.2
+SVTH|Bui Thi Ngoc|2003|7.9|He thong quan ly thu vien|8.5
+SVTH|Ngo Quoc Huy|2004|9.0|Nhan dien khuon mat bang hoc may|9.4
+SVTH|Huynh Thi An|2003|7.4|Ung dung IoT giam sat moi truong|8.0
+SVTH|Do Minh Tuan|2004|8.3|Website ho tro hoc lap trinh Java|8.8
