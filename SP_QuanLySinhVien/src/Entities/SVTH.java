@@ -25,7 +25,7 @@ public class SVTH extends SV implements IKhenThuong, INghienCuuKHoaHoc{
 	}
 	
 	public boolean duocTN() {
-		return dTB>=5 && diemDT>=5;
+		return dTB>=5 && diemDT>=5.0;
 	}
 	@Override
 	public boolean xetHocBong() {

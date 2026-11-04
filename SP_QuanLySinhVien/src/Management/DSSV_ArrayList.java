@@ -83,5 +83,39 @@ public class DSSV_ArrayList {
 			System.out.println("Loi dinh dang so"+e2.toString());
 		}
 	}
+	//Ghi đối tượng sv ra file
+	public void ghiFile_Object(String tenFile) {
+		try {
+			FileOutputStream f = new FileOutputStream(tenFile);
+			ObjectOutputStream fo = new ObjectOutputStream(f);
+			//duyet cac doi tuong sv trong ds
+			for (SV a: ds) {
+				fo.writeObject(a);
+			}
+	
+			fo.close();
+			f.close();
+			
+		}catch (IOException e) {
+			System.out.print("Loi ghi file");
+		}
+		
+	}
+	//Đọc dối tượng sv được tốt nghiệp từ file
+	public void docTepObject(String tenFile) throws IOException, ClassNotFoundException {
+		FileInputStream f = new FileInputStream(tenFile);
+		ObjectInputStream fo = new ObjectInputStream(f);
+		
+		while (f.available()>0) {
+			SV a =(SV)fo.readObject();
+			if (a.duocTN()) {
+				a.hienThi();
+			}
+		}
+		
+		fo.close();
+		f.close();
+	}
+	
 
 }

@@ -1,11 +1,13 @@
 package Client;
 
+import java.io.IOException;
+
 import Entities.*;
 import Management.DSSV;
 import Management.DSSV_ArrayList;
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, IOException {
 		// TODO Auto-generated method stub
 		
 	/*	SV sv1 = new SVSP("Tran Thu Ha",2006,8.5f,"Truong QHQN",9.0f);
@@ -27,7 +29,9 @@ public class Main {
 		
 		list.lietKe();
 		
-		
+		list.ghiFile_Object("DanhSachSinhVien_Object.dat");
+		System.out.println("-------------------");
+		list.docTepObject("DanhSachSinhVien_Object.dat");
 		
 	
 		
