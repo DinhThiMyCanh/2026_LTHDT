@@ -1,6 +1,8 @@
 package Entities;
 
-abstract public class SV {
+import java.io.Serializable;
+
+abstract public class SV implements Serializable {
 	protected String hoTen;
 	protected int namSinh;
 	protected double dTB;
