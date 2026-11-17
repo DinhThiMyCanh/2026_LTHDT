@@ -1,6 +1,6 @@
 package Management;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.io.*;
 
 import Entities.SV;
@@ -110,5 +110,4 @@ public class ArrayList_DSSV {
 		in.close();
 		f.close();
 	}
-	
 }
